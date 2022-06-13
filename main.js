@@ -1,7 +1,8 @@
+// YOUTUBE
 // #contents
 // #primary
 
-let primary = document.getElementById('primary');
-let parent = primary.parentNode;
+const primary = document.getElementById('primary');
+const parent = primary.parentNode;
 
 primary.remove();

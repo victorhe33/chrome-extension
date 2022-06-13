@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "MindGainz",
+  "version": "1.0",
+  "description": "A productivity app that will block youtube and amazon content. Get those coding gainz!",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon16.png",
+    "128": "icon16.png"
+  },
+  "options_page": "./index.html",
+  "options_ui": {
+    "page": "./index.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["./main.js"]
+    },
+    {
+      "matches": [
+        "https://www.amazon.com/*"
+      ],
+      "js": [
+        "./main2.js"
+      ]
+    }
+  ]
+}
