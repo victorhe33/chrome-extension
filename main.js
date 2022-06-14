@@ -21,3 +21,9 @@ image.setAttribute('src', 'https://www.motorbiscuit.com/wp-content/uploads/2022/
 image.setAttribute('class', 'image');
 image.setAttribute('id', 'image');
 parent.prepend(image);
+
+//Add text div
+const text = document.createElement('div');
+text.class = 'text';
+text.innerText = "Get Miata Here!";
+parent.appendChild(text);
