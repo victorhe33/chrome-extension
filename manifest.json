@@ -33,7 +33,8 @@
     },
     {
       "matches": ["https://www.amazon.com/*"],
-      "js": ["./main2.js"]
+      "js": ["./main2.js"],
+      "css": ["./style.css"]
     }
   ]
 }
