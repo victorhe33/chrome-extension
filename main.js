@@ -4,16 +4,16 @@
 //SELECTORS
 const primary = document.getElementById('primary');
 const parent = primary.parentNode;
-const head = document.querySelector('head');
 
 //REMOVE OFFENDING CONTENT
 primary.remove();
 
-//LINK CSS ?? no path to link from...
+//We chose to just inject a style sheet using our chrome extension manifest.
 // const link = document.createElement('link');
-// link.setAttribute('rel', 'stylesheet');
-// link.setAttribute('href', './style.css');
-// head.prepend(link);
+// link.rel = 'stylesheet';
+// link.type = 'text/css';
+// link.href = chrome.extension.getURL('style.css');
+// document.head.prepend(link);
 
 //REPLACE WITH IMAGE
 const image = document.createElement('img');

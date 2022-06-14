@@ -21,10 +21,14 @@
     "page": "./index.html",
     "open_in_tab": true
   },
+  "web_accessible_resources": [
+    "style.css"
+  ],
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["./main.js"]
+      "js": ["./main.js"],
+      "css": ["style.css"]
     },
     {
       "matches": [
