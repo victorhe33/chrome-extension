@@ -32,4 +32,29 @@ setTimeout(function() {
   newContainer.appendChild(text);
 }, 3000);
 
-newContainer.addEventListener('click', newContainer.remove);
+//image generator on click from API
+const unsplash = fetch('https://picsum.photos/list')
+  .then((response) => response.json())
+  .then((images) => {
+    return images;
+  });
+
+const summonImage = async () => {
+  const a = await unsplash;
+  const randomNum = Math.floor(a.length * Math.random());
+  const randomID = a[randomNum].id;
+  const chosenOne = document.createElement('img');
+  chosenOne.setAttribute('src', 'https://unsplash.it/1200/800?image=' + `${randomID}`);
+  chosenOne.setAttribute('id', 'image');
+  
+  image.remove();
+  text.remove();
+  const oldOne = document.querySelector('#image');
+  oldOne.remove();
+
+  newContainer.appendChild(chosenOne);
+};
+
+//EVENT LISTENER
+newContainer.addEventListener('click', summonImage);
+
