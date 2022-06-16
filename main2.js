@@ -29,3 +29,29 @@ const text = document.createElement('div');
 text.className = 'text';
 text.innerText = "Get Miata Here!";
 newContainer.appendChild(text);
+
+//Collect image IDs from API
+const unsplash = fetch('https://picsum.photos/list')
+  .then((response) => response.json())
+  .then((images) => {
+    return images;
+  });
+
+//place random image into page, remove old content
+const summonImage = async () => {
+  const a = await unsplash;
+  const randomNum = Math.floor(a.length * Math.random());
+  const randomID = a[randomNum].id;
+  const chosenOne = document.createElement('img');
+  chosenOne.setAttribute('src', 'https://unsplash.it/1200/800?image=' + `${randomID}`);
+  chosenOne.setAttribute('id', 'image');
+
+  text.remove();
+  const oldOne = document.querySelector('#image');
+  oldOne.remove();
+
+  newContainer.appendChild(chosenOne);
+};
+
+//EVENT LISTENER
+newContainer.addEventListener('click', summonImage);
