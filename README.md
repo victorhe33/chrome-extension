@@ -6,3 +6,7 @@ Productivity app which blocks distracting content from sites like youtube, amazo
 
 ## To-Do
 - add Reddit to supported sites
+
+## Demo
+https://user-images.githubusercontent.com/94798862/175746244-a9bb12e2-0953-48c9-bf9b-8dae19f8168e.mov
+
